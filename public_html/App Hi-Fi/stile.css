@@ -1,0 +1,176 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+    -webkit-box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+    font-family: 'Comfortaa', Verdana;
+}
+
+span, p{
+    display: inline-block;
+}
+
+#container{
+    width: 364px;
+    height: 644px;
+    margin: 0 auto;
+    border: 2px solid black;
+}
+
+#titleBar{
+    height: 70px;
+    padding: 10px 15px;
+    background: rgb(135,224,253); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(135,224,253,1) 0%, rgba(83,203,241,1) 40%, rgba(5,171,224,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,224,253,1)), color-stop(40%,rgba(83,203,241,1)), color-stop(100%,rgba(5,171,224,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 40%,rgba(5,171,224,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+
+}
+
+#menu{
+    width: 44px;
+    height: 44px;
+    margin: 5px 0 0 0;
+    background: transparent url('menu.png') no-repeat center center;
+    float: left;
+}
+
+#titolo{
+    margin: 0px 0px 0px 50px;
+    font-size: 2.5em;
+    color: white;
+}
+
+#cerca{
+    width: 44px;
+    height: 44px;
+    background: transparent url('cerca.png') no-repeat center center;
+    float: right;
+    margin: 2px 0 0 0;
+}
+
+#scorri{
+    height: 60px;
+    padding: 7px 3px;
+}
+
+#frecciaSx{
+    width: 44px;
+    height: 44px;
+    margin: 5px 0 0 0;
+    color: rgba(50, 175, 255, 1);
+    float: left;
+    font-size: 2em;
+    -webkit-transform: scale(1, 1.3);
+}
+
+#genere{
+    color: rgba(50, 175, 255, 1);
+    font-size: 1.5em;
+    margin: 10px 0 0 60px;
+}
+
+#frecciaDx{
+    width: 44px;
+    height: 44px;
+    float: right;
+    text-align: right;
+    margin: 5px 0 0 0;
+    color: rgba(50, 175, 255, 1);
+    font-size: 2em;
+    -webkit-transform: scale(1, 1.3);
+}
+
+#immagini{
+    background: black;
+    height: 440px;
+}
+
+#img1, #img2, #img3, #img4{
+    width: 100%;
+    height: 100px;
+    padding: 3px 5px;
+    opacity: 0.6;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+#img1:hover, #img2:hover, #img3:hover, #img4:hover{
+    opacity: 1;
+    -webkit-transition: opacity 0.5s ease-in-out;
+}
+
+#img1{
+    background: black url('twd.jpg') no-repeat top left;
+}
+
+#img2{
+    background: black url('fringe.jpg') no-repeat top left;
+}
+
+#img3{
+    background: black url('tbbt.jpg') no-repeat top left; 
+}
+
+#img4{
+    background: black url('almost.jpg') no-repeat top left;
+}
+
+.titoloSerie{
+    opacity: 1; /* purtroppo non si può fare xD se solo funzionasse... */
+    font-size: 1.5em;
+    color: white;
+    text-shadow: 0 0 11px black;
+}
+
+.vaiASerie{
+    opacity: 1; /* purtroppo non si può fare xD se solo funzionasse... */
+    margin: 30px 0 0 0;
+    width: 44px;
+    height: 44px;
+    float: right;
+    text-align: right;
+    font-size: 2em;
+    color: white;
+    text-shadow: 0 0 11px black;
+}
+
+#navigationBar{
+    height: 70px;
+    background: rgb(238,238,238); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(238,238,238,1) 0%, rgba(204,204,204,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(238,238,238,1)), color-stop(100%,rgba(204,204,204,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(238,238,238,1) 0%,rgba(204,204,204,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eeeeee', endColorstr='#cccccc',GradientType=0 ); /* IE6-9 */
+
+}
+
+#calendario{
+    width: 120px;
+    height: 65px;
+    margin: 3px 0;
+    border-right: 1px solid rgba(150, 150, 150, 0.7);
+}
+
+#leMieSerie{
+    width: 120px;
+    height: 64px;
+    margin: 3px 0;
+    border-right: 1px solid rgba(150, 150, 150, 0.7);
+}
+
+#esplora{
+    width: 120px;
+    height: 64px;
+    margin: 3px 0;
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+
+<!-- Un semplice test in cui il contatore viene aggiornato man mano dal browser -->
+
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div id="count">0</div>
+        <script>
+            var div = document.getElementById("count");
+            div.number = 0;
+            var dateStart = new Date();
+
+            (function update() {
+                div.number++;
+                div.innerHTML = div.number;
+                if (div.number < 5000) {
+                    // non cambia molto tra 0, 1 o 2 nanosecondi
+                    // setTimeout(update, 0);
+                    setTimeout(update, 1);
+                    // setTimeout(update, 2);
+                } else {
+                    var dateEnd = new Date();
+
+                    console.log(dateStart);
+                    console.log(dateEnd);
+                }
+            })();
+
+// Considerazioni sulle performance.
+// var number vS div.number: è più efficiente creare una
+// nuova variabile in memoria per mantenere il counter
+// oppure appendere il counter all'elemento del DOM?
+
+// da 0 a 5000
+// var number: 37s
+// div.number: 38s
+
+// da 0 a 10000
+// var number: 1m & 14s
+// div.number: 1m & 13s
+
+// quindi non c'è alcuna differenza!
+
+        </script>
+    </body>
+</html>

@@ -1,0 +1,373 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 22-mar-2014, 18.57.58
+    Author     : alex
+*/
+
+@-webkit-keyframes 'mostraForm'{
+    
+    0%{
+        left: -100%;
+    }
+    
+    50%{
+        left: -100%;
+    }
+    
+    75%{
+        left: 5%;
+    }
+    
+    90%{
+        left: -2%;
+    }
+    
+    100%{
+        left: 0%;
+    }
+    
+}
+
+
+
+@-webkit-keyframes 'REST'{
+    
+    0%{
+        -webkit-transform: scale(0.2, 0.2);
+        opacity: 0;
+        margin: 10% 0 0 0;
+    }
+    
+    70%{
+        -webkit-transform: scale(1.1, 1.1);
+        margin: 10% 0 0 0;
+    }
+    
+    90%{
+        -webkit-transform: scale(1, 1);
+        margin: 10% 0 0 0;
+        opacity: 1;
+    }
+    
+    100%{
+        margin: 2% 0;
+    }
+    
+}
+
+@-webkit-keyframes 'comparsaFreccia'{
+    
+    0%{
+        opacity: 0;
+    }
+    
+    75%{
+        opacity: 0;
+    }
+    
+    100%{
+        opacity: 1;
+    }
+    
+}
+
+
+html{
+    height: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+body{
+    background: black;
+    padding: 0;
+    margin: 0;
+    font-family: 'Comfortaa', 'Verdana', 'Serif';
+    -webkit-animation: cambiaColoreSfondo 126s 6s infinite linear;
+    height: 100%;
+}
+
+p{
+    margin: 0;
+}
+
+form{
+    background-color: transparent;
+    padding: 1%;
+    margin: 0 auto;
+    width: 50%;
+    box-sizing: border-box;
+    position: relative;
+    -webkit-animation: mostraForm 4s 1 ease-in-out;
+}
+
+label{
+    min-width: 25%;
+    text-align: right;
+    display: inline-block;
+    margin: 0 0.3% 4% 0;
+    color: rgba(50, 175, 255, 1);
+    font-size: 1.5em;
+}
+
+input[type="text"], input[type="password"], input[type="email"]{
+    padding: 4px 5px;
+    border-radius: 5px;
+    -webkit-border-radius: 7px 0 7px 0;
+    border: 0.11em solid rgba(50, 175, 255, 1);
+    font-size: 1.2em;
+    color: rgba(50, 175, 255, 1);
+    font-family: inherit;
+    outline: none;
+    -webkit-transition: box-shadow 0.3s linear;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus{
+
+    box-shadow: -1px 0px 3px rgba(50, 175, 255, 1), 1px 0px 3px rgba(50, 175, 255, 1), 0px 1px 3px rgba(50, 175, 255, 1), 0px -1px 3px rgba(50, 175, 255, 1);
+    -webkit-transition: all 0.3s linear;
+
+}
+
+button{
+    border-radius: 7px 0 7px 0;
+    -webkit-border-radius: 7px 0 7px 0;
+    border: 2px solid white;
+    display: inline-block;
+    margin: 5% 0 0 26%;
+    padding: 3% 15%;
+    font-family: inherit;
+    background: black;
+    outline: none;
+    color: white;
+    font-style: italic;
+    font-size: 1.1em;
+    -webkit-transition: box-shadow 0.3s linear;
+    background: rgb(135,224,253); /* Old browsers */
+    background: rgb(135,224,253); /* Old browsers */
+    background: -moz-linear-gradient(top,  rgba(135,224,253,1) 0%, rgba(83,203,241,1) 10%, rgba(5,171,224,1) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(135,224,253,1)), color-stop(10%,rgba(83,203,241,1)), color-stop(100%,rgba(5,171,224,1))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 10%,rgba(5,171,224,1) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 10%,rgba(5,171,224,1) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 10%,rgba(5,171,224,1) 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  rgba(135,224,253,1) 0%,rgba(83,203,241,1) 10%,rgba(5,171,224,1) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#87e0fd', endColorstr='#05abe0',GradientType=0 ); /* IE6-9 */
+    
+}
+
+button:hover, button:focus{
+    box-shadow: -2px 0px 3px rgba(50, 150, 255, 1), 
+        2px 0px 3px rgba(50, 175, 255, 1), 
+        0px 2px 3px rgba(50, 175, 255, 1), 
+        0px -2px 3px rgba(50, 175, 255, 1);
+    -webkit-transition: all 0.3s linear;
+}
+
+button:active{
+
+}
+
+span{
+    display: none;
+}
+
+.validazione{
+    min-height: 32px;
+    height: 32px;
+    max-height: 32px;
+    min-width: 32px;
+    width: 32px;
+    max-width: 32px;
+}
+
+.ok{
+    display: inline;
+    background-image: url(ok-v-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.ko{
+    display: inline;
+    background-image: url(x_icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/*******************************************************************************
+                            REST
+*******************************************************************************/
+
+#REST{
+    color: rgba(50, 175, 255, 1);
+    background: transparent;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: inherit;
+    font-size: 6em;  
+}
+
+#REST span{
+    display: inline-block;
+    -webkit-animation: REST 2s 1 ease-in-out;
+}
+
+
+/******************************************************************************
+                            CAMBIA
+******************************************************************************/
+
+#cambia{
+    display: inline-block;
+    position: relative;
+    min-height: 1%;
+    height: 1%;
+    max-height: 1%;
+    min-width: 1%;
+    max-width: 1%;
+    width: 1%;
+    top: -237px;
+    left: 75%;
+    background: rgba(50, 175, 255, 1);
+    color: white;
+    padding: 0 1%;
+    font-weight: 100;
+    text-align: center;
+    font-size: 2em;
+    font-family: inherit;
+    -webkit-transform: scale(1, 1);
+    -webkit-border-radius: 50% 50%;
+    -webkit-animation: comparsaFreccia 6s 1 ease-in-out;
+    -webkit-transition: background 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+#cambia:hover{
+    background: rgba(50, 225, 255, 0.8);
+    -webkit-transition: background 0.5s ease-in-out;
+}
+
+
+
+
+
+/******************************************************************************
+                            CAMBIA STILE
+******************************************************************************/
+
+#cambiaColore{
+    width: 10%;
+    margin: 5% auto 0 auto;
+    
+    
+}
+
+#cambiaColore span{
+    display: inline-block;
+    width: 20px;
+    min-width: 20px;
+    height: 20px;
+    min-height: 20px;
+    -webkit-border-radius: 50%;
+    cursor: pointer;
+}
+
+#blue span, #orange span, #blue_1 span{
+    -webkit-border-radius: 5px;
+    position: relative;
+    top: -70px;
+    left: -10px;
+    width: auto;
+    height: auto;
+    opacity: 0;
+    padding: 2px 10px;
+    font-size: 1em;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+
+#blue{
+    background: rgba(50, 175, 255, 1);
+}
+
+#blue span{
+    color: rgba(50, 175, 255, 1);
+    background: white;
+}
+
+#blue:hover span{
+    opacity: 1;
+    color: rgba(50, 175, 255, 1);
+    background: white;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+#orange{
+    background: rgba(255, 30, 0, 1);
+}
+
+#orange span{
+    background: rgba(255, 30, 0, 1);
+    color: white;
+}
+
+#orange:hover span{
+    opacity: 1;
+    background: rgba(255, 30, 0, 1);
+    color: white;
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+#blue_1{
+    background: rgba(50, 175, 255, 1);
+}
+
+#blue_1 span{
+    background: black;
+    color: rgba(50, 175, 255, 1);
+}
+
+#blue_1:hover span{
+    opacity: 1;
+    background: black;
+    color: rgba(50, 175, 255, 1);
+    -webkit-transition: opacity 0.3s ease-in-out;
+}
+
+
+/******************************************************************************
+                              PAGINE
+******************************************************************************/
+
+#pagina1{
+    margin: 0;
+    min-height: 100%;
+    display: block;
+    box-sizing: content-box;
+}
+
+#pagina2{
+    min-height: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+#hello_world{
+    height: 100%;
+    padding: 20% 0;
+    background: transparent;
+    font-size: 5em;
+    color: inherit;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+
+

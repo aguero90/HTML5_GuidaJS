@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Prova Form con JS</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!--
+        <link href="FormConJS_Orange.css" type="text/css" rel ="stylesheet" id="orange"/>
+        -->
+        <link href="FormConJS_Blue.css" type="text/css" rel ="stylesheet" id="css" class="blue" />
+        <link href='http://fonts.googleapis.com/css?family=Comfortaa' rel='stylesheet' type='text/css'>
+        <script src="FormConJS.js"></script> 
+    </head>
+    <body>
+        <div id="pagina1">
+            <p id="REST">
+                <span onclick="ScrollaPagina();">REST</span>
+            </p>
+            <form name="form">
+                <label for="username">Username:</label>
+                <input id="username" name="username" type="text" size="30" autofocus="autofocus" onchange="modificaUsername();"/>
+                <span class="validazione" id="validazione_username">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <br />
+                <label for="password">Password:</label>
+                <input id="password" name="password" type ="password" size="30" onchange="modificaPassword()"/>
+                <span class="validazione" id="validazione_password">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <br />
+                <label for="mail">E-mail: </label>
+                <input id="mail" name="mail" type="email" size="30"  onchange="modificaMail()"/>
+                <span class="validazione" id="validazione_mail">&nbsp;&nbsp;&nbsp;&nbsp;</span>
+                <br />
+                <button type="submit">Registrati</button>
+            </form>
+            <span id="cambia" onclick="CambiaStile();">></span>
+            <div id="cambiaColore">
+                <span id="blue" onclick="CambiaABlue();">
+                    <span class="descrizione">
+                        blue style
+                    </span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <span id="orange" onclick="CambiaAOrange();">
+                    <span class="descrizione">
+                        orange style
+                    </span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+                <span id="blue_1" onclick="CambiaABlue_1();">
+                    <span class="descrizione">
+                        blue1 style
+                    </span>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </div>
+        </div>
+        <div id="pagina2" >
+            <p id="hello_world">
+                Hello World! xD
+            </p>
+        </div>
+    </body>
+</html>
