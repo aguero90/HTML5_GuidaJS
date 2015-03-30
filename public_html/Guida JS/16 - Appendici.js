@@ -101,6 +101,97 @@ document.addEventListener("readystatechange", function () {
 //                          non propriamente legato a JS
 //          - onPropertyChange: si attiva quando cambia la proprietà di un
 //                              elemento
+
+
+
+
+
+/******************************************************************************
+ onFocus, onBlut e onSelect
+ ******************************************************************************/
+
+// - onFocus ("focus" in addEventListener()):
+//          Questo handler si attiva quando l'utente entra in un campo ed è
+//          l'opposto di onBlur
+// - onBlur ("blur" in addEventListener()):
+//          Attivato quando il puntatore del mouse o il cursore esce dalla
+//          finestra corrente.
+//          Applicato alle form, invece, si attiva quando si esce dal campo
+//          della form
+// - onSelect ("select" in addEventListener()):
+//          Si attiva quando si effettua una selezione all'interno di una
+//          casella di testo sia con il mouse, sia tenendo premuto SHIFT e
+//          selezionando con le frecce della tastiera.
 //
+// -------------------------- onFocus e onBlur --------------------------------
+//
+// per capire come funziona vediamo un esempio:
+//      <textarea id="focusArea"> ... testo ... </textarea>
+var txtArea = document.getElementByID("focusArea");
+
+txtArea.addEventListener("focus", function () {
+    console.log("focus");
+});
+txtArea.addEventListener("blur", function () {
+    console.log("blur");
+});
+//
+// Tramite questo codice ogni volta che selezioneremo la textarea sarà stampato
+// su console "focus". Mentre ogni volta che deselezioniamo la textarea, cioè
+// usciamo da essa, verrà stampato su console "blur".
+//
+// ----------------------------- onSelect -------------------------------------
+//
+// per capire come funziona vediamo un esempio:
+//      <textarea id="selectArea"> ... testo ... </textarea>
+var txtArea = document.getElementByID("selectArea");
+
+txtArea.addEventListener("select", function () {
+    console.log(window.getSelection().toString());
+});
+//
+// Tramite questo codice ogni volta che selezioniamo del testo sulla textarea,
+// questo sarà stampato sulla console.
+// Otteniamo il testo selezionato tramite il metodo window.getSelection().
+// Tuttavia questo metodo non funziona con le versioni di IE <= 8
+//
+// Se volessimo rendere funzionante il nostro codice anche sulle versioni più
+// vecchie di IE potremmo sfruttare il metodo document.selection.createRange():
+function getSelectedText() {
+
+    if (window.getSelection) {
+        // tutti i browser tranne IE <= 8
+        return window.getSelection().toString();
+    }
+    if (document.selection.createRange) {
+        // IE <= 8
+        return document.selection.createRange().toString();
+    }
+}
+
+var txtArea = document.getElementByID("selectArea");
+
+txtArea.addEventListener("select", function () {
+    console.log(getSelctedText());
+});
+//
+// --------------------------- TAG SUPPORTATI ----------------------------------
+//
+// Facciamo un elenco dei tag che accettano questi eventi:
+//
+// - onFocus e onBlur: - <select>
+//                     - <textarea>
+//                     - <input type="text">
+//                     - <checkbox>
+//                     - <fileupload>
+//                     - <password>
+//                     - <radio>
+//                     - <reset>
+//                     - <sumbit>
+//                     - <button>
+//                     - <body>
+//                     - <frameset>
+// - onSelect: - <textarea>
+//             - <input type="text">
 //
 //
